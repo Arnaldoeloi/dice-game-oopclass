@@ -32,26 +32,24 @@ bool Player::willPlayNow(){
     
     std::string answer="";
     
-    while(answer!="1" || answer!="2" || answer!="roll" || answer!="skip" || answer!="play"){
+    while(true){
         std::cin>>answer;
-        if(answer!="1"){
-            willPlay=true;
-        
-        }else if(answer=="2"){
-            willPlay=false;
-        
-        }else if(answer=="roll"){
-            willPlay=true;
-        
-        }else if(answer=="skip"){
-            willPlay=false;
-        
-        }else if(answer=="play"){
-            willPlay=true;
-        }
-        else{
+        int n;
+        try{
+            n = stoi(answer);
+        }catch(const std::invalid_argument& e1){
             std::cout<<"Be clear! Skip(1) or play(2)?"<<std::endl;
+            continue;
         }
+        if(n==1){
+            return willPlay=true;
+        }else if(n==2){
+            return willPlay=false;
+        }else{
+            std::cout<<"Be clear! Skip(1) or play(2)?"<<std::endl;
+            continue;
+        }
+        
     }
     return willPlay;
 }

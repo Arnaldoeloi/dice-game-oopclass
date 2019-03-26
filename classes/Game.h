@@ -8,6 +8,7 @@
 #include "Player.h"
 #include "Die.h"
 
+
 class Game{
     private:
         std::list <Player*> players_;
@@ -15,8 +16,10 @@ class Game{
 
         int score_goal_;
 
+        const int MIN_SCORE_GOAL=10;
 
     public:
+        Game();
         Game(int score_goal);
         ~Game(){};
 
@@ -31,7 +34,9 @@ class Game{
 
         void startGame();
 
-        int Game::playersPlaying();
+        int playersPlaying();
+
+        void announceWinnerAfterEveryoneLose();
 };
 
 #endif
