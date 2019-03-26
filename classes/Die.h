@@ -16,7 +16,8 @@ class Die{
         Die(int n_sides);
         ~Die(){};
 
-        void roll();
+        //Return the result of rolling one die at time
+        int roll();
             
 };
 

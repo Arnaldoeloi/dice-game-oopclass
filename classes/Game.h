@@ -13,14 +13,25 @@ class Game{
         std::list <Player*> players_;
         std::list <Die*> dice_;
 
-    public:
-        Game();
-        ~Game();
+        int score_goal_;
 
-        void run();
+
+    public:
+        Game(int score_goal);
+        ~Game(){};
+
         void printMenu();
+
         void addNewPlayer();
+        void addNewDie();
         
+        void run();
+
+        void inputAnswer();
+
+        void startGame();
+
+        int Game::playersPlaying();
 };
 
 #endif
