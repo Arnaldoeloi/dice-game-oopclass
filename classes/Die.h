@@ -13,7 +13,9 @@ class Die{
         std::uniform_int_distribution<> dis;
 
     public:
+        //Construct a die with n number of faces
         Die(int n_sides);
+        
         ~Die(){};
 
         //Return the result of rolling one die at time

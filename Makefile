@@ -9,6 +9,7 @@ LFLAGS	 =
 all: $(OBJS)
 	$(CC) -g $(OBJS) -o $(OUT) $(LFLAGS)
 	make run
+	make clean
 main.o: main.cpp classes/Game.h     
 	$(CC) $(FLAGS) -c main.cpp
 

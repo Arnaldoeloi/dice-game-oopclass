@@ -10,16 +10,24 @@ class Player{
         std::string name_;
         int score_;
     public:
+        //Player constructor
         Player();
+
+        //Player constructor with name
         Player(std::string name);
         ~Player();
 
+        //Set player name
         void setName(std::string name);
         std::string getName();
 
+        //Get player score
         int getScore();
 
+        //Roll a die given by Game
         void rollTheDie(Die& die);
+
+        //Add n points into score
         void addToScore(int n); 
 
         //return False if won`t play at the current turn or True if will
